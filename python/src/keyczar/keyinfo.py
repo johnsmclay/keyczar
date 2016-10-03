@@ -20,7 +20,7 @@ status, purpose, and the cipher mode.
 @author: arkajit.dey@gmail.com (Arkajit Dey)
 """
 
-import errors
+from keyczar import errors
 
 class _NameId(object):
   def __init__(self, name, key_id):
