@@ -21,11 +21,7 @@ A Reader supports reading metadata and key info for key sets.
 
 import os                
 
-import errors
-import keydata
-import keyinfo
-import keys
-import util
+from keyczar import errors,keydata,keyinfo,keys,util
 
 def CreateReader(location):
   """Factory function for Reader's
