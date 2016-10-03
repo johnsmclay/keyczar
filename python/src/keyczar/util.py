@@ -20,7 +20,7 @@ Utility functions for keyczar package.
 """
 
 import base64
-import cPickle
+import _pickle as cPickle
 import codecs
 import functools
 import math
@@ -53,7 +53,7 @@ from pyasn1.codec.der import decoder
 from pyasn1.codec.der import encoder
 from pyasn1.type import univ
 
-import errors
+from keyczar import errors
 
 try:
   from abc import ABCMeta, abstractmethod, abstractproperty
