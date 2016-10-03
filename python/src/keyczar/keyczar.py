@@ -23,14 +23,8 @@ encrypt, decrypt, sign and verify.
 import os
 import warnings
 
-import errors
+from keyczar import errors,keydata,keyinfo,keys,readers,writers,util
 import json
-import keydata
-import keyinfo
-import keys
-import readers
-import writers
-import util
 
 VERSION = 0
 VERSION_BYTE = '\x00'
