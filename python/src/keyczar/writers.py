@@ -20,8 +20,7 @@ A Writer supports writing metadata and key info for key sets.
 """
 import os
 
-import errors
-import util
+from keyczar import errors,util
 
 def CreateWriter(location):
   """Factory function for Writers
