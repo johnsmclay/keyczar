@@ -747,7 +747,7 @@ class IncrementalBase64WSStreamReader(codecs.StreamReader, object):
     step.
     @type size: integer
 
-    @param firstline: if firstline is true, and a UnicodeDecodeError happens
+    @param firstline: if firstline is true, and a nDecodeError happens
     after the first line terminator in the input only the first line will be
     returned, the rest of the input will be kept until the next call to read().
     @type firstline: boolean
@@ -796,7 +796,7 @@ class IncrementalBase64WSStreamReader(codecs.StreamReader, object):
         data = self.bytebuffer + newdata
         try:
           newchars, decodedbytes = self.decode(data, self.errors)
-        except UnicodeDecodeError, exc:
+        except UnicodeDecodeError as exc:
           if firstline:
             newchars, decodedbytes = self.decode(data[:exc.start], self.errors)
             lines = newchars.splitlines(True)
