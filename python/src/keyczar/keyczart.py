@@ -22,13 +22,8 @@ Keyczart(ool) is a utility for creating and managing Keyczar keysets.
 import os
 import sys
 
-import errors
+from keyczar import errors,keydata,keyinfo,readers,writers,util
 import keyczar
-import keydata
-import keyinfo
-import readers
-import writers
-import util
 
 KEYSETS = [('aes', keyinfo.DECRYPT_AND_ENCRYPT, None, None),
            ('aes-crypted', keyinfo.DECRYPT_AND_ENCRYPT, None, 'aes'),
