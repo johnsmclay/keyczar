@@ -318,7 +318,7 @@ def TrimBytes(byte_string):
 def RandBytes(n):
   """Return n random bytes."""
   # This function requires at least Python 2.4.
-  return os.urandom(n)
+  return int(os.urandom(n))
 
 def Hash(*inputs):
   """Return a SHA-1 hash over a variable number of inputs."""
